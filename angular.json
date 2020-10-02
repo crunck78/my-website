@@ -30,7 +30,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/pts/dist/pts.d.ts"
+            ]
           },
           "configurations": {
             "production": {
@@ -123,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "my-website"
+    }
+  },
+  "defaultProject": "my-website",
+  "cli": {
+    "analytics": "691a8713-8cfb-4355-8b6d-441e6c9beed6"
+  }
 }
