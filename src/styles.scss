@@ -1,3 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
-html, body { height: 100%; }
 body { margin: 0; font-family: 'Oxygen', sans-serif; }
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .title {
+        font-weight: 700;
+        font-size: 50px;
+        //text-decoration: underline;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .underline{
+            margin-top: 10px;
+            margin-bottom: 60px;
+            height: 6px;
+            width: 100px;
+            background-color: black;
+        }
+    }
+}
