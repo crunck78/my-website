@@ -1,0 +1,27 @@
+nav{
+    background-color: black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid cadetblue;
+    .links-container{
+        display: flex;
+        .page-link{
+            margin-left: 16px;
+            margin-right: 16px;
+            color: white;
+            font-size: 25px;
+            text-transform: uppercase;
+            &:hover{
+                animation: onHover 0.5s ease-in;
+                color: purple;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@keyframes onHover{
+    from { color: white;}
+    to { color: purple; }
+}

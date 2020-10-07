@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body { margin: 0; font-family: 'Oxygen', sans-serif; }
-.section {
+section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,6 +16,8 @@ body { margin: 0; font-family: 'Oxygen', sans-serif; }
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        background-color: darkgray;
         .underline{
             margin-top: 10px;
             margin-bottom: 60px;
