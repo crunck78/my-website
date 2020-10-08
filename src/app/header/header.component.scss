@@ -32,7 +32,7 @@
             font-size: 2em;
             font-family: 'Oxygen', sans-serif; 
             span{
-                color: cadetblue;
+                color: #5fa07a;
             }
         }
 
@@ -43,8 +43,8 @@
             justify-content: center;
             align-items: center;
             width: fit-content;
-            animation: colorChangeBack 1.2s ease-in-out;
-            background-color: rgba($color: turquoise, $alpha: 0);
+            animation: colorChangeBack 225ms ease-in;
+            background-color: rgba($color: #00ff88, $alpha: 0);
             font-size: 1.2em;
             color: white;
             padding: 16px;
@@ -54,14 +54,14 @@
                 width: 20px;
                 height: 20px;
                 margin-left: 6px;
-                animation: rotateArrowBack 1.2s ease-in-out;
+                animation: rotateArrowBack 225ms ease-in;
             }
 
             &:hover {
-                animation: colorChange 1.2s ease-in-out;
-                background-color: rgba($color: turquoise, $alpha: 1);
+                animation: colorChange 225ms ease-in;
+                background-color: rgba($color: #00ff88, $alpha: 1);
                 img {
-                    animation: rotateArrow 1.2s ease-in-out;
+                    animation: rotateArrow 225ms ease-in;
                     transform: rotate(90deg);
                 }
             }
@@ -71,19 +71,19 @@
 
 @keyframes colorChange {
     from {
-        background-color: rgba($color: turquoise, $alpha: 0);
+        background-color: rgba($color: #00ff88, $alpha: 0);
     }
     to {
-        background-color: rgba($color: turquoise, $alpha: 1);
+        background-color: rgba($color: #00ff88, $alpha: 1);
     }
 }
 
 @keyframes colorChangeBack {
     from {
-        background-color: rgba($color: turquoise, $alpha: 1);
+        background-color: rgba($color: #00ff88, $alpha: 1);
     }
     to {
-        background-color: rgba($color: turquoise, $alpha: 0);
+        background-color: rgba($color: #00ff88, $alpha: 0);
     }
 }
 

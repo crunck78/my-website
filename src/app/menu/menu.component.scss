@@ -1,19 +1,24 @@
 nav{
-    background-color: black;
+    background-color:#2d2d1a;
     height: 50px;
     display: flex;
     align-items: center;
-    border-bottom: 3px solid cadetblue;
+    border-bottom: 3px solid #00ff88;
+    position: sticky;
+    top: 0;
+    max-width: 100%;
+    overflow: hidden;
+    z-index: 1;
     .links-container{
         display: flex;
         .page-link{
             margin-left: 16px;
             margin-right: 16px;
             color: white;
-            font-size: 25px;
+            font-size: 20px;
             text-transform: uppercase;
             &:hover{
-                animation: onHover 0.5s ease-in;
+                animation: onHover 225ms ease-in;
                 color: purple;
                 cursor: pointer;
             }
