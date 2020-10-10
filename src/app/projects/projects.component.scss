@@ -3,7 +3,35 @@ section {
     mat-grid-list {
         width: 100%;
         mat-grid-tile {
-            background: #00ff88;
+            //background: #00ff88;
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                animation: blurOut 1s;
+                &:hover {
+                    animation: blurIn 1s;
+                    filter: blur(6px);
+                }
+            }
         }
+    }
+}
+
+@keyframes blurIn {
+    from {
+        filter: blur(0px);
+    }
+    to {
+        filter: blur(6px);
+    }
+}
+
+@keyframes blurOut {
+    from {
+        filter: blur(6px);
+    }
+    to {
+        filter: blur(0px);
     }
 }

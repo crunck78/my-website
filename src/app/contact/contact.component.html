@@ -3,4 +3,11 @@
         CONTACT
         <div class="underline"></div>
     </div>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" ngNativeValidate >
+        <input placeholder="Name" name="name" ngModel #name="ngModel">
+        <input placeholder="Email" type="email" name="email" ngModel #email="ngModel" required>
+        <textarea placeholder="Message" name="message" ngModel #message="ngModel" required></textarea>
+        <br>
+        <button>SUBMIT</button>
+    </form>
 </section>

@@ -1,0 +1,10 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    background-color: #313131;
+    p {
+        color: #5fa07a;
+    }
+}

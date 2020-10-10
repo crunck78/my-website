@@ -1,9 +1,47 @@
-section{
+section {
     background-color: #14291a;
-    .title{
+    .title {
         color: white;
-        .underline{
+        .underline {
             background-color: white;
+        }
+    }
+
+    form {
+        min-width: 500px;
+        //background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        input {
+            width: 100%;
+            height: 30px;
+            margin-bottom:  6px;
+        }
+
+        textarea {
+            min-height: 120px;
+            width: 100%;
+        }
+        button {
+            border-style: solid;
+            font-family: "Oxygen", sans-serif;
+            font-weight: 300;
+            font-size: 1.2em;
+            color: white;
+            padding: 16px;
+            padding-top: 6px !important;
+            padding-bottom: 6px !important;
+            background-color: #14291a;
+            border-color: white !important;
+            animation: colorChangeBack 225ms ease-in;
+            background-color: rgba($color: #00ff88, $alpha: 0);
+            &:hover {
+                animation: colorChange 225ms ease-in;
+                background-color: rgba($color: #00ff88, $alpha: 1);
+                border-color: #00ff88 !important;
+            }
         }
     }
 }
