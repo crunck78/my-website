@@ -10,10 +10,12 @@ import { CanvasSpace, Create, Group, Line, Pt } from 'pts';
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
 
-  @ViewChild("parent") private parentRef: ElementRef<HTMLElement>;
+  @ViewChild("home") private parentRef: ElementRef<HTMLElement>;
 
   space: any;
   canvas: HTMLElement;
+  button: HTMLElement;
+  homeElement: HTMLElement;
 
   constructor(private window: Window) {
 
@@ -21,8 +23,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     //get canvas from parent
-    const parentElement = this.parentRef.nativeElement;
-    this.canvas = parentElement.querySelector("canvas");
+    this.homeElement = this.parentRef.nativeElement;
+    this.canvas = this.homeElement.querySelector("canvas");
+    this.button = this.homeElement.querySelector("button");
     //console.log(this.canvas);
     this.graphicDraw();
   }
@@ -73,7 +76,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
     //// ----
 
-    this.space.bindMouse().bindTouch().play();
+    this.space.bindMouse().play();
   }
 
   onResize() {

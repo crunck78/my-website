@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
@@ -7,7 +7,10 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, AfterViewInit {
+
+  @ViewChild('contact') private parentRef: ElementRef<HTMLElement>;
+  contactElement: HTMLElement;
 
   constructor(private http: HttpClient) { }
   
@@ -32,5 +35,9 @@ export class ContactComponent implements OnInit {
     //Start php via the built in server: $ php -S localhost:8000
     this.endpoint = "https://mihai-andrei-neacsu.developerakademie.com/email/sendEmail.php";
     //this.endpoint = "http://localhost:4200/src/app/sendEmail.php";
+  }
+
+  ngAfterViewInit(){
+    this.contactElement = this.parentRef.nativeElement;
   }
 }

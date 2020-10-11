@@ -23,6 +23,11 @@ nav{
                 cursor: pointer;
             }
         }
+
+        .active{
+            animation: onHover 225ms ease-in;
+            color: purple;
+        }
     }
 }
 
