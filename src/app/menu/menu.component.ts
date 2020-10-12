@@ -24,4 +24,12 @@ export class MenuComponent implements OnInit, AfterViewInit {
 
   }
 
+  clearMenu() {
+    this.buttons.forEach((button) => {
+      if (button.classList.contains('active')) {
+        button.classList.remove('active');
+      }
+    });
+  }
+
 }

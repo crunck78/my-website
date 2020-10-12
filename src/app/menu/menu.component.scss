@@ -1,5 +1,5 @@
-nav{
-    background-color:#2d2d1a;
+nav {
+    background-color: #2d2d1a;
     height: 50px;
     display: flex;
     align-items: center;
@@ -9,29 +9,33 @@ nav{
     max-width: 100%;
     overflow: hidden;
     z-index: 1;
-    .links-container{
+    .links-container {
         display: flex;
-        .page-link{
+        .page-link {
             margin-left: 16px;
             margin-right: 16px;
             color: white;
             font-size: 20px;
             text-transform: uppercase;
-            &:hover{
+            &:hover {
                 animation: onHover 225ms ease-in;
                 color: purple;
                 cursor: pointer;
             }
         }
 
-        .active{
+        .active {
             animation: onHover 225ms ease-in;
             color: purple;
         }
     }
 }
 
-@keyframes onHover{
-    from { color: white;}
-    to { color: purple; }
+@keyframes onHover {
+    from {
+        color: white;
+    }
+    to {
+        color: purple;
+    }
 }

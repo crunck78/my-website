@@ -30,42 +30,41 @@ export class AppComponent implements AfterViewInit {
 
   title = 'my-website';
   ngAfterViewInit(): void {
+
+    //listen for header button click
     this.headComp.button.onclick = () => {
       this.aboutComp.aboutElement.scrollIntoView({ behavior: 'smooth' });
-      this.menuComp.buttons.forEach((link) => {
-        if (link.classList.contains('active')) {
-          link.classList.remove('active');
-        }
-      });
+      this.menuComp.clearMenu();
       this.menuComp.buttons[1].classList.add('active');
     }
 
-    this.menuComp.buttons.forEach((button) => {
-      button.onclick = () => {
-        console.log(button.innerHTML);
-        if (button.innerHTML == 'home') {
-          this.headComp.homeElement.scrollIntoView({ behavior: 'smooth' });
-        }
-        if (button.innerHTML == 'about') {
-          this.aboutComp.aboutElement.scrollIntoView({ behavior: 'smooth' });
-        }
-        if (button.innerHTML == 'projects') {
-          this.projectsComp.projectsElement.scrollIntoView({ behavior: 'smooth' });
-        }
-        if (button.innerHTML == 'contact') {
-          this.contactComp.contactElement.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        this.menuComp.buttons.forEach((link) => {
-          if (link.classList.contains('active')) {
-            link.classList.remove('active');
-          }
-        });
-
-        button.classList.add('active');
-      }
-    });
+    this.listenForMenuButtonsClick();
 
   }
 
+  listenForMenuButtonsClick() {
+    this.menuComp.buttons.forEach((button) => {
+      button.onclick = () => {
+        //console.log(button.innerHTML);
+        if (button.innerHTML == 'home') {
+          this.scrollTo(this.headComp.homeElement);
+        }
+        if (button.innerHTML == 'about') {
+          this.scrollTo(this.aboutComp.aboutElement);
+        }
+        if (button.innerHTML == 'projects') {
+          this.scrollTo(this.projectsComp.projectsElement);
+        }
+        if (button.innerHTML == 'contact') {
+          this.scrollTo(this.contactComp.contactElement);
+        }
+        this.menuComp.clearMenu();
+        button.classList.add('active');
+      }
+    });
+  }
+
+  scrollTo(element: HTMLElement) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
 }

@@ -15,7 +15,7 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.projectsElement = this.parentRef.nativeElement;
   }
 
