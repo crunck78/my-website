@@ -4,29 +4,37 @@
         <div class="underline"></div>
     </div>
     <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile>
+        <mat-grid-tile *ngFor="let project of allProjects">
             <div class="tile-container">
-                <img src="../../assets/img/projects/elpolloloco.jpg">
-                <div class="description"></div>
+                <img src="../../assets/img/projects/{{project.img}}">
+                <div class="description">
+                    <mat-card>Simple card</mat-card>
+                </div>
             </div>
         </mat-grid-tile>
-        <mat-grid-tile>
+        <!--<mat-grid-tile>
             <div class="tile-container">
                 <img src="../../assets/img/projects/joinAddTask.jpg">
-                <div class="description"></div>
+                <div class="description">
+                    <mat-card>Simple card</mat-card>
+                </div>
             </div>
         </mat-grid-tile>
         <mat-grid-tile>
             <div class="tile-container">
                 <img src="../../assets/img/projects/ringoffireingame.jpg">
-                <div class="description"></div>
+                <div class="description">
+                    <mat-card>Simple card</mat-card>
+                </div>
             </div>
         </mat-grid-tile>
         <mat-grid-tile>
             <div class="tile-container">
                 <img src="../../assets/img/projects/tictactoe.jpg">
-                <div class="description"></div>
+                <div class="description">
+                    <mat-card>Simple card</mat-card>
+                </div>
             </div>
-        </mat-grid-tile>
+        </mat-grid-tile>-->
     </mat-grid-list>
 </section>
