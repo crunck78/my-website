@@ -36,21 +36,6 @@
         }
 
         button {
-            border-style: solid;
-            font-family: "Oxygen", sans-serif;
-            font-weight: 300;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: fit-content;
-            animation: colorChangeBack 225ms ease-in;
-            background-color: rgba($color: #00ff88, $alpha: 0);
-            font-size: 1.2em;
-            color: white;
-            border-color: white !important;
-            padding: 16px;
-            padding-top: 6px !important;
-            padding-bottom: 6px !important;
             img {
                 width: 20px;
                 height: 20px;
@@ -58,14 +43,9 @@
                 animation: rotateArrowBack 225ms ease-in;
             }
 
-            &:hover {
-                animation: colorChange 225ms ease-in;
-                background-color: rgba($color: #00ff88, $alpha: 1);
-                border-color: #00ff88 !important;
-                img {
-                    animation: rotateArrow 225ms ease-in;
-                    transform: rotate(90deg);
-                }
+            &:hover img {
+                animation: rotateArrow 225ms ease-in;
+                transform: rotate(90deg);
             }
         }
     }

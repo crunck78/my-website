@@ -4,12 +4,17 @@
         <div class="underline"></div>
     </div>
     <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile *ngFor="let project of allProjects">
-            <div class="tile-container">
+        <mat-grid-tile *ngFor="let project of allProjects; let i = index">
+            <div (mouseenter)="showCard(i)" (mouseleave)="hiddeCard(i)" class="tile-container">
                 <img src="../../assets/img/projects/{{project.img}}">
-                <div class="description">
-                    <mat-card>Simple card</mat-card>
-                </div>
+                <mat-card class="hidde">
+                    <mat-card-title>{{project.name}}</mat-card-title>
+                    <mat-card-subtitle>{{project.type}}</mat-card-subtitle>
+
+                    <button (click)="visitProject(project.url)">View Project</button>
+
+
+                </mat-card>
             </div>
         </mat-grid-tile>
         <!--<mat-grid-tile>

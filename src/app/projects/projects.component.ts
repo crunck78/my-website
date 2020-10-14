@@ -10,6 +10,7 @@ import { allProjects } from '../projects';
 export class ProjectsComponent implements OnInit, AfterViewInit {
 
   allProjects: Object[] = [];
+  show = false;
 
   @ViewChild('projects') private parentRef: ElementRef<HTMLElement>
   projectsElement: HTMLElement;
@@ -17,15 +18,27 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
-   
-   allProjects.forEach((project) =>{
-    this.allProjects.push(Object.assign({}, project));
-   });
+
+    allProjects.forEach((project) => {
+      this.allProjects.push(Object.assign({}, project));
+    });
     console.log(this.allProjects);
   }
 
   ngAfterViewInit() {
     this.projectsElement = this.parentRef.nativeElement;
+  }
+
+  showCard(index: number) {
+    this.projectsElement.querySelectorAll('mat-card').item(index).classList.remove('hidde');
+  }
+
+  hiddeCard(index: number) {
+    this.projectsElement.querySelectorAll('mat-card').item(index).classList.add('hidde');
+  }
+
+  visitProject(url: string) {
+    window.open(url, "_blank");
   }
 
 }
