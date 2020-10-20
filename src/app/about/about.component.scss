@@ -1,9 +1,32 @@
 .img-mask {
     width: 300px;
-    height: 300px;
+    /*regular hexagon smaller height equals radius ( half of largest height ) times square root of 3*/
+    height: calc(150px * 1.7321);
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        clip-path: url(#hexagonImg);
+    }
+}
+
+.text-mask {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+    height: fit-content;
+    background-color: #00ff88;
+    text-align: center;
+    clip-path: url(#hexagonText);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        /*keeping the text not inside the edges of the hexagon*/
+        margin-left: 10%;
+        margin-right: 10%;
+        color: #4d4d4d;
     }
 }

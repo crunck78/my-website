@@ -50,7 +50,8 @@ section {
                     button {
                         color: orangered !important;
                         border-color: orangered !important;
-                        
+                        transition: all 225ms ease-in;
+                        cursor: pointer;
                         &:hover {
                             color: white !important;
                             font-weight: 700;
@@ -60,43 +61,5 @@ section {
                 }
             }
         }
-    }
-}
-
-@keyframes showCardText {
-    from {
-        transform: translateY(-100px);
-    }
-
-    to {
-        transform: translateY(0px);
-    }
-}
-
-@keyframes showCardButton {
-    from {
-        transform: translateY(100px);
-    }
-
-    to {
-        transform: translateY(0px);
-    }
-}
-
-@keyframes blurIn {
-    from {
-        filter: blur(0px);
-    }
-    to {
-        filter: blur(6px);
-    }
-}
-
-@keyframes blurOut {
-    from {
-        filter: blur(6px);
-    }
-    to {
-        filter: blur(0px);
     }
 }
