@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
+import { ViewportserviceService } from '../services/viewportservice.service';
 
 @Component({
   selector: 'app-menu',
@@ -12,7 +13,7 @@ export class MenuComponent implements OnInit, AfterViewInit {
   navElement: HTMLElement;
   buttons: NodeListOf<HTMLElement>;
 
-  constructor() { }
+  constructor(public viewPortService: ViewportserviceService) { }
 
   ngAfterViewInit(): void {
     this.navElement = this.parentRef.nativeElement;

@@ -1,9 +1,9 @@
 <section #contact>
     <div class="title">
-        <span>CONTACT</span>
-        <div class="underline"></div>
+        <span snInViewport>CONTACT</span>
+        <div class="underline" snInViewport></div>
     </div>
-    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" ngNativeValidate >
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" ngNativeValidate snInViewport>
         <input placeholder="Name" name="name" ngModel #name="ngModel">
         <input placeholder="Email" type="email" name="email" ngModel #email="ngModel" required>
         <textarea placeholder="Message" name="message" ngModel #message="ngModel" required></textarea>

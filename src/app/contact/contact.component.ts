@@ -33,7 +33,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     //Start php via the built in server: $ php -S localhost:8000
-    this.endpoint = "https://mihai-andrei-neacsu.developerakademie.com/email/sendEmail.php";
+    this.endpoint = "https://mihai-andrei-neacsu.developerakademie.com/email/sendMail.php";
     //this.endpoint = "http://localhost:4200/src/app/sendEmail.php";
   }
 

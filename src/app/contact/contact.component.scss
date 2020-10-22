@@ -8,7 +8,8 @@ section {
     }
 
     form {
-        min-width: 500px;
+        max-width: 80%;
+        width: 500px;
         //background-color: black;
         display: flex;
         flex-direction: column;
@@ -43,5 +44,13 @@ section {
                 border-color: #00ff88 !important;
             }
         }
+    }
+
+    form.sn-viewport--in{
+        animation: showAnim 1s ease-in;
+    }
+
+    form.sn-viewport--out{
+        opacity: 0;
     }
 }

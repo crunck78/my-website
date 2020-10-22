@@ -46,12 +46,3 @@
 .text-mask.sn-viewport--out {
     opacity: 0;
 }
-
-@keyframes showAnim {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
-}

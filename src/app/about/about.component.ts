@@ -4,6 +4,7 @@ import { ViewEncapsulation } from '@angular/core';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CanvasSpace, Create, Group, Line, Polygon, Pt, Rectangle } from 'pts';
 import { paragraphs } from '../paragraphs';
+import { ViewportserviceService } from '../services/viewportservice.service'
 
 @Component({
   selector: 'app-about',
@@ -17,7 +18,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   paragraphs = paragraphs;
  
-  constructor() { }
+  constructor(private viewPortService: ViewportserviceService) { }
 
   ngOnInit(): void {
 
@@ -30,5 +31,11 @@ export class AboutComponent implements OnInit, AfterViewInit {
     paragraphContainers.forEach( (container, index) =>{
         container.insertAdjacentHTML( 'beforeend', this.paragraphs[index]);
     });
+  }
+
+  onInViewportChange(inViewport: boolean){
+    console.log('Viewport change', inViewport);
+    this.viewPortService.aboutVisible = inViewport;
+
   }
 }

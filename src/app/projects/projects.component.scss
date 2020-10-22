@@ -60,6 +60,14 @@ section {
                     }
                 }
             }
+
+            .tile-container.sn-viewport--in{
+                animation: showAnim 225ms ease-in;
+            }
+
+            .tile-container.sn-viewport--out{
+                opacity: 0;
+            }
         }
     }
 }

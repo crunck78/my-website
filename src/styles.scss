@@ -20,12 +20,28 @@ section {
         align-items: center;
         width: 100%;
         color: #45474A;
+
+        span.sn-viewport--in{
+            //animation-delay: 1s !important;
+            animation: showCardText 1s ease-in;
+        }
+
+        span.sn-viewport--out{
+            opacity: 0;
+        }
+
         .underline{
             margin-top: 10px;
             margin-bottom: 60px;
             height: 4px;
-            width: 100px;
+            width: 0px;
             background-color: #45474A;
+            transition-delay: 1s !important;
+            transition: width 225ms ease-in;
+        }
+
+        .underline.sn-viewport--in{
+            width: 100px;
         }
     }
 }
@@ -111,5 +127,14 @@ button {
     }
     to {
         filter: blur(0px);
+    }
+}
+
+@keyframes showAnim {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
     }
 }
