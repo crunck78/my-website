@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { MatCardModule } from '@angular/material/card';
+import { InViewportModule } from '@thisissoon/angular-inviewport';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,14 @@ import { MatCardModule } from '@angular/material/card';
     FooterComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MatGridListModule,
     FormsModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    InViewportModule
   ],
   providers: [
     { provide: Window, useValue: window }

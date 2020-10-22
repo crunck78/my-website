@@ -26,7 +26,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.aboutElement = this.parentRef.nativeElement;
     let paragraphContainers = this.aboutElement.querySelectorAll('.text-mask');
-    console.log(paragraphContainers);
+    //console.log(paragraphContainers);
     paragraphContainers.forEach( (container, index) =>{
         container.insertAdjacentHTML( 'beforeend', this.paragraphs[index]);
     });

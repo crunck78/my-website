@@ -8,12 +8,20 @@
         object-fit: cover;
         clip-path: url(#hexagonImg);
     }
+
+    img.sn-viewport--out {
+        opacity: 0;
+    }
+
+    img.sn-viewport--in {
+        animation: showAnim 1s ease-in;
+    }
 }
 
 .text-mask {
     margin-top: 16px;
     margin-bottom: 16px;
-    width: 100%;
+    width: 80%;
     height: fit-content;
     background-color: #00ff88;
     text-align: center;
@@ -28,5 +36,22 @@
         margin-left: 10%;
         margin-right: 10%;
         color: #4d4d4d;
+    }
+}
+
+.text-mask.sn-viewport--in {
+    animation: showAnim 225ms ease-in;
+}
+
+.text-mask.sn-viewport--out {
+    opacity: 0;
+}
+
+@keyframes showAnim {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
     }
 }
