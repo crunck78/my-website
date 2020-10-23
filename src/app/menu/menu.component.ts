@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.navElement = this.parentRef.nativeElement;
     this.buttons = this.navElement.querySelectorAll('.page-link');
-    console.log(this.buttons);
+    //console.log(this.buttons);
   }
 
   ngOnInit(): void {

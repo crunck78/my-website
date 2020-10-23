@@ -1,4 +1,6 @@
-<section #about snInViewport (inViewportChange)="onInViewportChange($event)">
+<section #about snInViewport (inViewportChange)="onInViewportChange($event, 'about')"   [inViewportOptions]="{
+    rootMargin: '-500px 0px 0px 0px'
+  }">
     <div class="title">
         <span snInViewport>ABOUT</span>
         <div class="underline" snInViewport></div>

@@ -1,4 +1,6 @@
-<section #projects>
+<section #projects snInViewport (inViewportChange)="onInViewportChange($event, 'projects')"   [inViewportOptions]="{
+    rootMargin: '0px 0px 0px 0px'
+  }">
     <div class="title">
         <span snInViewport>PROJECTS</span>
         <div class="underline" snInViewport></div>

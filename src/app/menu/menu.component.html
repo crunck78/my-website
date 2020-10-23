@@ -1,5 +1,5 @@
 <nav #menu>
     <div class="links-container">
-        <div *ngFor="let link of links" class="page-link" [class.active]="viewPortService.aboutVisible && link=='about'"  dest="{{link}}">{{link}}</div>
+        <div *ngFor="let link of links" class="page-link" [class.active]="link==viewPortService.currentInView && viewPortService.isVisible"  dest="{{link}}">{{link}}</div>
     </div>
 </nav>

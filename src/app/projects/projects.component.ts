@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { allProjects } from '../projects';
+import { ViewportserviceService } from '../services/viewportservice.service'
 
 
 @Component({
@@ -15,7 +16,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   @ViewChild('projects') private parentRef: ElementRef<HTMLElement>
   projectsElement: HTMLElement;
 
-  constructor() { }
+  constructor(private viewPortService: ViewportserviceService) { }
 
   ngOnInit(): void {
 
@@ -24,7 +25,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     allProjects.forEach((project) => {
       this.allProjects.push(Object.assign({}, project));
     });
-    console.log(this.allProjects);
+    //console.log(this.allProjects);
   }
 
   ngAfterViewInit() {
@@ -43,8 +44,14 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     window.open(url, "_blank");
   }
 
+  //sets the mat-grid-list cols attribute between 1 and 2 on window resize
   onResize(event: any) {
     this.colsSize = event.target.innerWidth <= 600 ? 1 : 2;
+  }
+
+  onInViewportChange(inViewport: boolean, id: string){
+    this.viewPortService.isVisible = inViewport;
+    this.viewPortService.currentInView = id;
   }
 
 }
