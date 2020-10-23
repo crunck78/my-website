@@ -3,7 +3,7 @@
         <span snInViewport>PROJECTS</span>
         <div class="underline" snInViewport></div>
     </div>
-    <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-list cols="{{colsSize}}" rowHeight="2:1" (window:resize)="onResize($event)">
         <mat-grid-tile *ngFor="let project of allProjects; let i = index">
             <div (mouseenter)="showCard(i)" (mouseleave)="hiddeCard(i)" class="tile-container" snInViewport>
                 <img src="../../assets/img/projects/{{project.img}}">

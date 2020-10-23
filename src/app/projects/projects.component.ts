@@ -11,13 +11,15 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
 
   allProjects: Object[] = [];
   show = false;
-
+  colsSize: number;
   @ViewChild('projects') private parentRef: ElementRef<HTMLElement>
   projectsElement: HTMLElement;
 
   constructor() { }
 
   ngOnInit(): void {
+
+    this.colsSize = window.innerWidth <= 600 ? 1 : 2;
 
     allProjects.forEach((project) => {
       this.allProjects.push(Object.assign({}, project));
@@ -39,6 +41,10 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
 
   visitProject(url: string) {
     window.open(url, "_blank");
+  }
+
+  onResize(event: any) {
+    this.colsSize = event.target.innerWidth <= 600 ? 1 : 2;
   }
 
 }

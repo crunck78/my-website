@@ -8,7 +8,7 @@ nav {
     top: 0;
     max-width: 100%;
     overflow: hidden;
-    z-index: 1;
+    z-index: 4;
     .links-container {
         display: flex;
         .page-link {
@@ -39,3 +39,20 @@ nav {
         color: purple;
     }
 }
+
+
+@media only screen and (max-width: 500px) {
+    /* For mobile phones: */
+   nav .links-container .page-link{
+       font-size: 15px;
+   }
+}
+
+@media only screen and (max-width: 360px) {
+    /* For mobile phones: */
+     nav .links-container .page-link{
+        font-size: 10px;
+    }
+  }
+
+

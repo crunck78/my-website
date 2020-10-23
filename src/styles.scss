@@ -1,14 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-body { margin: 0; font-family: 'Oxygen', sans-serif; }
+body {
+    margin: 0;
+    font-family: "Oxygen", sans-serif;
+}
 section {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 50px;
 
     .title {
         font-weight: 700;
@@ -19,28 +20,28 @@ section {
         justify-content: center;
         align-items: center;
         width: 100%;
-        color: #45474A;
+        color: #45474a;
 
-        span.sn-viewport--in{
+        span.sn-viewport--in {
             //animation-delay: 1s !important;
-            animation: showCardText 1s ease-in;
+            animation: showCardText 225ms ease-in;
         }
 
-        span.sn-viewport--out{
+        span.sn-viewport--out {
             opacity: 0;
         }
 
-        .underline{
+        .underline {
             margin-top: 10px;
             margin-bottom: 60px;
             height: 4px;
             width: 0px;
-            background-color: #45474A;
+            background-color: #45474a;
             transition-delay: 1s !important;
             transition: width 225ms ease-in;
         }
 
-        .underline.sn-viewport--in{
+        .underline.sn-viewport--in {
             width: 100px;
         }
     }
@@ -70,7 +71,7 @@ button {
     }
 }
 
-.hidde{
+.hidde {
     display: none !important;
 }
 
@@ -138,3 +139,25 @@ button {
         transform: scale(1);
     }
 }
+
+@media only screen and (max-width: 500px) {
+    /* For mobile phones: */
+    section{
+        padding: 16px;
+        .title{
+            font-size: 24px;
+        }
+
+        .underline.sn-viewport--in {
+            width: 50px;
+        }
+    }
+  }
+
+ 
+//   @media only screen and (max-width: 300px) {
+//     /* For mobile phones: */
+//    section{
+//        overflow: scroll;
+//    }
+//   }

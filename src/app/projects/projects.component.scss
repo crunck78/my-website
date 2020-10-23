@@ -1,4 +1,5 @@
 section {
+    z-index: 1;
     background-color: floralwhite;
     mat-grid-list {
         width: 100%;
@@ -28,6 +29,7 @@ section {
                     animation: blurOut 1s;
                 }
                 mat-card {
+                    padding: 0;
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -71,3 +73,15 @@ section {
         }
     }
 }
+
+
+@media only screen and (max-width: 800px) {
+    /* For mobile phones: */
+    mat-card-title{
+        font-size: 20px !important;
+    }
+
+    button{
+        font-size: 12px !important;
+    }
+  }
