@@ -142,19 +142,18 @@ button {
 
 @media only screen and (max-width: 500px) {
     /* For mobile phones: */
-    section{
+    section {
         padding: 16px;
-        .title{
+        padding-top: 60px !important;
+        .title {
             font-size: 24px;
-        }
-
-        .underline.sn-viewport--in {
-            width: 50px;
+            .underline.sn-viewport--in {
+                width: 50px;
+            }
         }
     }
-  }
+}
 
- 
 //   @media only screen and (max-width: 300px) {
 //     /* For mobile phones: */
 //    section{

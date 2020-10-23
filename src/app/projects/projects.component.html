@@ -2,7 +2,9 @@
     rootMargin: '0px 0px 0px 0px'
   }">
     <div class="title">
-        <span snInViewport>PROJECTS</span>
+        <span snInViewport  [inViewportOptions]="{
+            rootMargin: '10px 0px 0px 0px'
+          }">PROJECTS</span>
         <div class="underline" snInViewport></div>
     </div>
     <mat-grid-list cols="{{colsSize}}" rowHeight="2:1" (window:resize)="onResize($event)">
