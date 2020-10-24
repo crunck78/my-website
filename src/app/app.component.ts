@@ -42,7 +42,7 @@ export class AppComponent implements AfterViewInit {
   listenForMenuButtonsClick() {
     this.menuComp.buttons.forEach((button) => {
       button.onclick = () => {
-        //console.log(button.innerHTML);
+        console.log(button.innerHTML);
         if (button.innerHTML == 'home') {
           this.scrollTo(this.headComp.homeElement);
         }
