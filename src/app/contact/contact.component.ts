@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { ViewportserviceService } from '../services/viewportservice.service'
 
 @Component({
   selector: 'app-contact',
@@ -12,8 +13,8 @@ export class ContactComponent implements OnInit, AfterViewInit {
   @ViewChild('contact') private parentRef: ElementRef<HTMLElement>;
   contactElement: HTMLElement;
 
-  constructor(private http: HttpClient) { }
-  
+  constructor(private http: HttpClient, private viewPortService: ViewportserviceService) { }
+
   endpoint: string;
 
   onSubmit(myForm: NgForm) {
@@ -37,7 +38,13 @@ export class ContactComponent implements OnInit, AfterViewInit {
     //this.endpoint = "http://localhost:4200/src/app/sendEmail.php";
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.contactElement = this.parentRef.nativeElement;
+  }
+  
+  onInViewportChange(inViewport: boolean, id: string) {
+    this.viewPortService.isVisible = inViewport;
+    this.viewPortService.currentInView = id;
+    this.viewPortService.contactIsVissible = inViewport;
   }
 }

@@ -2,13 +2,14 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { CanvasSpace, Create, Group, Line, Pt } from 'pts';
+import { ViewportserviceService } from '../services/viewportservice.service'
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit, AfterViewInit {
+export class HeaderComponent implements AfterViewInit {
 
   @ViewChild("home") private parentRef: ElementRef<HTMLElement>;
 
@@ -17,7 +18,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   button: HTMLElement;
   homeElement: HTMLElement;
 
-  constructor(private window: Window) {
+  constructor(private window: Window, private viewPortService: ViewportserviceService) {
 
   }
 
@@ -28,10 +29,6 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     this.button = this.homeElement.querySelector("button");
     //console.log(this.canvas);
     this.graphicDraw();
-  }
-
-  ngOnInit(): void {
-
   }
 
   graphicDraw() {
@@ -83,5 +80,11 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     this.space.removeAll();
     //this.canvas.remove();
     this.graphicDraw();
+  }
+
+  onInViewportChange(inViewport: boolean, id: string) {
+    this.viewPortService.isVisible = inViewport;
+    this.viewPortService.currentInView = id;
+    this.viewPortService.homeIsVissible = inViewport;
   }
 }

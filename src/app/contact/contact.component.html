@@ -1,4 +1,6 @@
-<section #contact>
+<section #contact snInViewport (inViewportChange)="onInViewportChange($event, 'contact')" [inViewportOptions]="{
+    rootMargin: '-50% 0px -49% 0px'
+  }">
     <div class="title">
         <span snInViewport>CONTACT</span>
         <div class="underline" snInViewport></div>

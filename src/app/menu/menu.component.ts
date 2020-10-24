@@ -6,8 +6,7 @@ import { ViewportserviceService } from '../services/viewportservice.service';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit, AfterViewInit {
-
+export class MenuComponent implements AfterViewInit {
   links = ["home", "about", "projects", "contact"];
   @ViewChild('menu') private parentRef: ElementRef<HTMLElement>;
   navElement: HTMLElement;
@@ -18,11 +17,6 @@ export class MenuComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.navElement = this.parentRef.nativeElement;
     this.buttons = this.navElement.querySelectorAll('.page-link');
-    //console.log(this.buttons);
-  }
-
-  ngOnInit(): void {
-
   }
 
   clearMenu() {
@@ -32,5 +26,4 @@ export class MenuComponent implements OnInit, AfterViewInit {
       }
     });
   }
-
 }

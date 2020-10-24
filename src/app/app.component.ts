@@ -12,34 +12,31 @@ import { ProjectsComponent } from './projects/projects.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-
-  @ViewChild(ContactComponent)
-  private contactComp: ContactComponent;
-
-  @ViewChild(ProjectsComponent)
-  private projectsComp: ProjectsComponent;
+  @ViewChild(HeaderComponent)
+  private headComp: HeaderComponent;
 
   @ViewChild(AboutComponent)
   private aboutComp: AboutComponent;
 
-  @ViewChild(HeaderComponent)
-  private headComp: HeaderComponent;
+  @ViewChild(ProjectsComponent)
+  private projectsComp: ProjectsComponent;
+
+  @ViewChild(ContactComponent)
+  private contactComp: ContactComponent;
 
   @ViewChild(MenuComponent)
   private menuComp: MenuComponent;
 
   title = 'my-website';
-  ngAfterViewInit(): void {
 
+  ngAfterViewInit(): void {
     //listen for header button click
     this.headComp.button.onclick = () => {
       this.aboutComp.aboutElement.scrollIntoView({ behavior: 'smooth' });
       this.menuComp.clearMenu();
       this.menuComp.buttons[1].classList.add('active');
     }
-
     this.listenForMenuButtonsClick();
-
   }
 
   listenForMenuButtonsClick() {

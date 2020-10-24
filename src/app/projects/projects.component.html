@@ -1,8 +1,8 @@
-<section #projects snInViewport (inViewportChange)="onInViewportChange($event, 'projects')"   [inViewportOptions]="{
-    rootMargin: '0px 0px 0px 0px'
+<section #projects snInViewport (inViewportChange)="onInViewportChange($event, 'projects')" [inViewportOptions]="{
+    rootMargin: '-50% 0px -50% 0px'
   }">
     <div class="title">
-        <span snInViewport  [inViewportOptions]="{
+        <span snInViewport [inViewportOptions]="{
             rootMargin: '10px 0px 0px 0px'
           }">PROJECTS</span>
         <div class="underline" snInViewport></div>
@@ -14,36 +14,9 @@
                 <mat-card class="hidde">
                     <mat-card-title>{{project.name}}</mat-card-title>
                     <mat-card-subtitle>{{project.type}}</mat-card-subtitle>
-
                     <button (click)="visitProject(project.url)">View Project</button>
-
-
                 </mat-card>
             </div>
         </mat-grid-tile>
-        <!--<mat-grid-tile>
-            <div class="tile-container">
-                <img src="../../assets/img/projects/joinAddTask.jpg">
-                <div class="description">
-                    <mat-card>Simple card</mat-card>
-                </div>
-            </div>
-        </mat-grid-tile>
-        <mat-grid-tile>
-            <div class="tile-container">
-                <img src="../../assets/img/projects/ringoffireingame.jpg">
-                <div class="description">
-                    <mat-card>Simple card</mat-card>
-                </div>
-            </div>
-        </mat-grid-tile>
-        <mat-grid-tile>
-            <div class="tile-container">
-                <img src="../../assets/img/projects/tictactoe.jpg">
-                <div class="description">
-                    <mat-card>Simple card</mat-card>
-                </div>
-            </div>
-        </mat-grid-tile>-->
     </mat-grid-list>
 </section>

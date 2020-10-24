@@ -6,10 +6,10 @@ import { Injectable } from '@angular/core';
 export class ViewportserviceService {
   public isVisible = false;
   public currentInView: string;
-  public homeIsVissible: false;
-  public aboutIsVissible: false;
-  public projectsIsVissible: false;
-  public contactIsVissible: false;
+  public homeIsVissible: boolean;
+  public aboutIsVissible: boolean;
+  public projectsIsVissible: boolean;
+  public contactIsVissible: boolean;
 
   constructor() { }
 }

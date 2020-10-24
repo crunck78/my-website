@@ -9,7 +9,6 @@ import { ViewportserviceService } from '../services/viewportservice.service'
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit, AfterViewInit {
-
   allProjects: Object[] = [];
   show = false;
   colsSize: number;
@@ -19,13 +18,10 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   constructor(private viewPortService: ViewportserviceService) { }
 
   ngOnInit(): void {
-
     this.colsSize = window.innerWidth <= 600 ? 1 : 2;
-
     allProjects.forEach((project) => {
       this.allProjects.push(Object.assign({}, project));
     });
-    //console.log(this.allProjects);
   }
 
   ngAfterViewInit() {
@@ -49,9 +45,9 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     this.colsSize = event.target.innerWidth <= 600 ? 1 : 2;
   }
 
-  onInViewportChange(inViewport: boolean, id: string){
+  onInViewportChange(inViewport: boolean, id: string) {
     this.viewPortService.isVisible = inViewport;
     this.viewPortService.currentInView = id;
+    this.viewPortService.projectsIsVissible = inViewport;
   }
-
 }
