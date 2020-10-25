@@ -1,6 +1,7 @@
 section {
     z-index: 0;
     background-color: #14291a;
+    padding-top: 125px !important;
     .title {
         color: white;
         .underline {
@@ -48,10 +49,17 @@ section {
     }
 
     form.sn-viewport--in{
-        animation: showAnim 1s ease-in;
+        animation: showAnim 500ms ease-in-out;
     }
 
     form.sn-viewport--out{
         opacity: 0;
+    }
+
+    svg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
     }
 }

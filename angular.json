@@ -32,7 +32,7 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "./node_modules/pts/dist/pts.d.ts"
+              
             ]
           },
           "configurations": {
