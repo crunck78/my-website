@@ -36,7 +36,7 @@ export class AppComponent implements AfterViewInit {
       this.menuComp.clearMenu();
       this.menuComp.buttons[1].classList.add('active');
     }
-    //this.listenForMenuButtonsClick();
+    this.listenForMenuButtonsClick();
   }
 
   listenForMenuButtonsClick() {
