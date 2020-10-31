@@ -27,7 +27,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
       this.http.post(this.endpoint, myForm.value)
         .subscribe(
           (response) => { console.log(response) },
-          (response) => { console.log(response) }
+          (error) => { console.error(error) }
         );
     }
   }

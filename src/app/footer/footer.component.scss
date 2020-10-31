@@ -1,17 +1,20 @@
 .footer {
+    border-top: 3px solid #00ff88;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    justify-content: center;
     align-items: center;
     overflow: auto;
-    background-color: #313131;
+    background-color: #2d2d1a;
     padding-top: 10px;
     p {
-        color: #5fa07a;
+        color: white;
     }
 
     .extern-links {
-        width: 32px;
-        height: 32px;
+        width: 40px;
+        height: 40px;
+        margin-left: 16px;
         a img {
             width: 100%;
             height: 100%;

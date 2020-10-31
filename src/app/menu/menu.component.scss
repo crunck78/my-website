@@ -19,14 +19,14 @@ nav {
             text-transform: uppercase;
             &:hover {
                 animation: onHover 225ms ease-in;
-                color: purple;
+                color: #00ff88;
                 cursor: pointer;
             }
         }
 
         .active {
             animation: onHover 225ms ease-in;
-            color: purple;
+            color: #00ff88;
         }
     }
 }
@@ -36,7 +36,7 @@ nav {
         color: white;
     }
     to {
-        color: purple;
+        color: #00ff88;
     }
 }
 

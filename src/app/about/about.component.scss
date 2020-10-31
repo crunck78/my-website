@@ -23,7 +23,7 @@
     margin-bottom: 16px;
     width: 80%;
     height: fit-content;
-    background-color: #00ff88;
+    background-color: #2d2d1a;
     text-align: center;
     clip-path: url(#hexagonText);
     display: flex;
@@ -35,7 +35,10 @@
         /*keeping the text not inside the edges of the hexagon*/
         margin-left: 10%;
         margin-right: 10%;
-        color: #4d4d4d;
+        color: white;
+        a {
+            color: #5fa07a;
+        }
     }
 }
 
@@ -63,7 +66,7 @@ section {
         width: 200px;
         /*regular hexagon smaller height equals radius ( half of largest height ) times square root of 3*/
         height: calc(100px * 1.7321);
-        img{
+        img {
             clip-path: url(#hexagonImg200px);
         }
     }

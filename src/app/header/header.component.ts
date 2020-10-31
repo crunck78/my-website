@@ -52,7 +52,7 @@ export class HeaderComponent implements AfterViewInit {
         // make a line and turn it into an "op" (see the guide on Op for more)
         let perpend = new Group(this.space.center.$subtract(0.1), this.space.pointer).op(Line.perpendicularFromPt);
         pts.rotate2D(-0.0005, this.space.center);
-        //line.rotate2D(0.0005,  [0,0]);
+        //perpend.rotate2D(0.0005,  [0,0]);
 
         pts.forEach((p, i) => {
           let distanceFromMouse = Line.magnitude(Group.from([p, this.space.pointer]));
@@ -73,7 +73,7 @@ export class HeaderComponent implements AfterViewInit {
 
     //// ----
 
-    this.space.bindMouse().play();
+    this.space.play();
   }
 
   onResize() {
