@@ -16,20 +16,44 @@ export class ContactComponent implements OnInit, AfterViewInit {
   constructor(private http: HttpClient, private viewPortService: ViewportserviceService) { }
 
   endpoint: string;
+  submitReport: string;
+  submitComplete = false;
+  resultColor: string;
 
   onSubmit(myForm: NgForm) {
 
     console.log(myForm.value);
     console.log(myForm.valid);
 
+    //showProgressBar
+
     //You may also want to check the response. But again, let's keep it simple.
     if (myForm.valid) {
       this.http.post(this.endpoint, myForm.value)
         .subscribe(
-          (response) => { console.log(response) },
-          (error) => { console.error(error) }
+          (response) => {
+            console.log(response);
+            //this.resultColor = "#00ff88";
+            this.submitReport = "Thank up for your Contact. I will replay As soon as possible!";
+            this.submitComplete = true;
+          },
+          (error) => {
+            console.error(error);
+            //this.resultColor = "red";
+            this.submitReport = "Error occure while sending your message! You can contact me directly on e-mail: crunck78@gmail.com.";
+            this.submitComplete = true;
+          },
+          () => {
+            //show Mat Card submitReport
+            //this.submitComplete = true;
+          }
         );
     }
+  }
+
+  closeCard() {
+    this.submitComplete = false;
+    this.submitReport = '';
   }
 
   ngOnInit(): void {
@@ -41,7 +65,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.contactElement = this.parentRef.nativeElement;
   }
-  
+
   onInViewportChange(inViewport: boolean, id: string) {
     this.viewPortService.isVisible = inViewport;
     this.viewPortService.currentInView = id;

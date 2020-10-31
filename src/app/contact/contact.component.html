@@ -15,4 +15,12 @@
         <br>
         <button>SUBMIT</button>
     </form>
+    <mat-card *ngIf="submitComplete">
+        <mat-card-content>
+            <p>{{ submitReport }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button (click)="closeCard()">OK</button>
+          </mat-card-actions>
+    </mat-card>
 </section>
