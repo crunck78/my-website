@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { InViewportModule } from '@thisissoon/angular-inviewport';
 
 @NgModule({
@@ -34,6 +35,7 @@ import { InViewportModule } from '@thisissoon/angular-inviewport';
     FormsModule,
     HttpClientModule,
     MatCardModule,
+    MatProgressBarModule,
     InViewportModule
   ],
   providers: [

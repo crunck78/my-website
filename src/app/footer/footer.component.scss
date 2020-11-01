@@ -1,5 +1,5 @@
 .footer {
-    border-top: 3px solid #00ff88;
+    //border-top: 3px solid #00ff88;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -7,6 +7,7 @@
     overflow: auto;
     background-color: #2d2d1a;
     padding-top: 10px;
+    position: relative;
     p {
         color: white;
     }
@@ -20,5 +21,12 @@
             height: 100%;
             object-fit: contain;
         }
+    }
+
+    mat-progress-bar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
     }
 }

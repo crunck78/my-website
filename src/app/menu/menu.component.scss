@@ -3,7 +3,7 @@ nav {
     height: 50px;
     display: flex;
     align-items: center;
-    border-bottom: 3px solid #00ff88;
+    //border-bottom: 3px solid #00ff88;
     position: sticky;
     top: 0;
     max-width: 100%;
@@ -28,6 +28,13 @@ nav {
             animation: onHover 225ms ease-in;
             color: #00ff88;
         }
+    }
+
+    mat-progress-bar{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
 }
 

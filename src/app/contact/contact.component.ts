@@ -1,7 +1,8 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { ViewportserviceService } from '../services/viewportservice.service'
+import { ViewportserviceService } from '../services/viewportservice.service';
+import { ProgressBarService } from '../services/progress-bar.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,7 +14,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
   @ViewChild('contact') private parentRef: ElementRef<HTMLElement>;
   contactElement: HTMLElement;
 
-  constructor(private http: HttpClient, private viewPortService: ViewportserviceService) { }
+  constructor(private http: HttpClient, private viewPortService: ViewportserviceService, private progressBar: ProgressBarService) { }
 
   endpoint: string;
   submitReport: string;
@@ -21,7 +22,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
   resultColor: string;
 
   onSubmit(myForm: NgForm) {
-
+    this.progressBar.mode = "indeterminate";
     console.log(myForm.value);
     console.log(myForm.valid);
 
@@ -33,19 +34,16 @@ export class ContactComponent implements OnInit, AfterViewInit {
         .subscribe(
           (response) => {
             console.log(response);
-            //this.resultColor = "#00ff88";
+            this.resultColor = "#00ff88";
             this.submitReport = "Thank up for your Contact. I will replay As soon as possible!";
             this.submitComplete = true;
+            myForm.reset();
           },
           (error) => {
             console.error(error);
-            //this.resultColor = "red";
+            this.resultColor = "#ff0077";
             this.submitReport = "Error occure while sending your message! You can contact me directly on e-mail: crunck78@gmail.com.";
             this.submitComplete = true;
-          },
-          () => {
-            //show Mat Card submitReport
-            //this.submitComplete = true;
           }
         );
     }
@@ -54,6 +52,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
   closeCard() {
     this.submitComplete = false;
     this.submitReport = '';
+    this.progressBar.mode = "determinate";
   }
 
   ngOnInit(): void {

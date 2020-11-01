@@ -28,7 +28,7 @@ section {
             min-height: 120px;
             width: 100%;
         }
-        button {
+        /*button {
             border-style: solid;
             font-family: "Oxygen", sans-serif;
             font-weight: 300;
@@ -41,12 +41,12 @@ section {
             border-color: white !important;
             animation: colorChangeBack 225ms ease-in;
             background-color: rgba($color: #00ff88, $alpha: 0);
-            &:hover {
-                animation: colorChange 225ms ease-in;
-                background-color: rgba($color: #00ff88, $alpha: 1);
-                border-color: #00ff88 !important;
-            }
-        }
+            // &:hover {
+            //     animation: colorChange 225ms ease-in;
+            //     background-color: rgba($color: #00ff88, $alpha: 1);
+            //     border-color: #00ff88 !important;
+            // }
+        }*/
     }
 
     form.sn-viewport--in {
@@ -70,5 +70,9 @@ section {
         left: 60px;
         right: 60px;
         z-index: 2;
+        border-width: 2px;
+        border-style: solid;
+        background-color: #2D2D1A;
+        animation: showAnim 225ms ease-in;
     }
 }

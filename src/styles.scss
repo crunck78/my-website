@@ -64,7 +64,8 @@ button {
     padding-top: 6px !important;
     padding-bottom: 6px !important;
 
-    &:hover {
+    &:not([disabled]):hover {
+        cursor: pointer;
         animation: colorChange 225ms ease-in;
         background-color: rgba($color: #00ff88, $alpha: 1);
         border-color: #00ff88;
@@ -73,6 +74,14 @@ button {
 
 .hidde {
     display: none !important;
+}
+
+.mat-progress-bar-fill::after {
+    background-color: #00ff88;
+}
+
+.mat-progress-bar-buffer {
+    background-color: white;
 }
 
 @keyframes colorChange {
