@@ -35,14 +35,14 @@ export class ContactComponent implements OnInit, AfterViewInit {
           (response) => {
             console.log(response);
             this.resultColor = "#00ff88";
-            this.submitReport = "Thank up for your Contact. I will replay As soon as possible!";
+            this.submitReport = "Thank up for your Contact. I will replay as soon as possible!";
             this.submitComplete = true;
             myForm.reset();
           },
           (error) => {
             console.error(error);
             this.resultColor = "#ff0077";
-            this.submitReport = "Error occure while sending your message! You can contact me directly on e-mail: crunck78@gmail.com.";
+            this.submitReport = "Error occure while sending your message! You can contact me directly on e-mail: crunck78@googlemail.com.";
             this.submitComplete = true;
           }
         );
