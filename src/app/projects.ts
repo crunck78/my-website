@@ -26,5 +26,12 @@ export const allProjects = [
         img: 'tictactoe.jpg',
         type: 'Javascript',
         url: 'https://mihai-andrei-neacsu.developerakademie.com/tictactoe/'
+    },
+    {
+        name: 'Simple CRM',
+        description: '',
+        img: 'crm.jpg',
+        type: 'Angular / Firebase',
+        url: 'https://simple-crm-16c71.web.app/'
     }
 ];
