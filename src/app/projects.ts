@@ -4,7 +4,7 @@ export const allProjects = [
         description: '',
         img: 'elpolloloco.jpg',
         type: 'JavaScript',
-        url: 'https://mihai-andrei-neacsu.developerakademie.com/el-pollo-loco/'
+        url: 'https://mihai-andrei-neacsu.developerakademie.com/projects/el-pollo-loco/'
     },
     {
         name: 'Join',
@@ -25,7 +25,7 @@ export const allProjects = [
         description: '',
         img: 'tictactoe.jpg',
         type: 'Javascript',
-        url: 'https://mihai-andrei-neacsu.developerakademie.com/tictactoe/'
+        url: 'https://mihai-andrei-neacsu.developerakademie.com/projects/tictactoe/'
     },
     {
         name: 'Simple CRM',

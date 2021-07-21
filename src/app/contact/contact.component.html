@@ -8,7 +8,7 @@
     <span snInViewport>CONTACT</span>
     <div class="underline" snInViewport></div>
   </div>
-  <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" ngNativeValidate snInViewport>
+  <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" ngNativeValidate novalidate snInViewport>
     <!--<mat-progress-bar mode="indeterminate"></mat-progress-bar>-->
     <input placeholder="Name" name="name" ngModel #name="ngModel">
     <input placeholder="Email" type="email" name="email" ngModel #email="ngModel" required>
