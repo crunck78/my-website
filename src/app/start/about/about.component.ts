@@ -16,7 +16,6 @@ import { paragraphs } from '../../paragraphs';
 export class AboutComponent implements AfterViewInit {
   @ViewChild("about") private parentRef: ElementRef<HTMLElement>;
   aboutElement: HTMLElement;
-  inViewBreakPoint: number; //initialize in app.component.ts via setInViewBreakPoint function
 
   paragraphs = paragraphs;
 

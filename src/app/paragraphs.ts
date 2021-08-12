@@ -1,5 +1,5 @@
 export const paragraphs = [
-    `<p>Hi, my Name is Mihai. I'm 30 years old. I leave in Germany and my passion is <b>programming Computers</b>.</p>`,
+    `<p>Hi, my Name is Mihai. I'm ${calculateAge()} years old. I leave in Germany and my passion is <b>programming Computers</b>.</p>`,
 
     `<p>I was born in <b>Brasov, Romania</b>. I graduated in a technological high school as a <b>computing technician Operator</b>.</p>`,
 
@@ -7,7 +7,7 @@ export const paragraphs = [
         There I follow a Curse on German Language for Immigrants working beside a Restaurant as a Dishwasher.
     </p>`,
 
-    `<p>After graduating the Language Curse with a B1 Degree in 2011, I started working at a Factory, operating <b>CNC cutting machines</b>.</p>`,
+    `<p>After graduating the German Language Curse with a B1 Degree in 2011, I started working at a Factory, operating <b>CNC cutting machines</b>.</p>`,
 
     `<p>At this point I've started to self educate myself on programming computers.
         Started by following tutorials on the internet and reading books.
@@ -29,3 +29,9 @@ export const paragraphs = [
 
     `<p>Besides programming, I am also interested in social and economic movements. In particular <b><a href="https://www.thevenusproject.com/" target="_blank">The Venus Project Organisation</a></b>.</p>`
 ];
+
+function calculateAge(){
+    let birthYear = 1990;
+    let currentYear = new Date().getFullYear();
+    return currentYear - birthYear;
+}
