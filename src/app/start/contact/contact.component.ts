@@ -9,26 +9,22 @@ import { NavigationService } from 'src/app/services/navigation.service';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit, AfterViewInit {
+export class ContactComponent implements OnInit {
 
   constructor(
     private http: HttpClient,
     private progressBar: ProgressBarService,
     public navigation: NavigationService) { }
 
-  endpoint: string;
+  //endpoint = "http://localhost:4200/src/app/sendEmail.php";
+  endpoint = "https://mihai-andrei-neacsu.developerakademie.com/email/sendMail.php";
+
   submitReport: string;
   submitComplete = false;
   resultColor: string;
 
   onSubmit(myForm: NgForm) {
     this.progressBar.mode = "indeterminate";
-    console.log(myForm.value);
-    console.log(myForm.valid);
-
-    //showProgressBar
-
-    //You may also want to check the response. But again, let's keep it simple.
     if (myForm.valid) {
       this.http.post(this.endpoint, myForm.value)
         .subscribe(
@@ -42,7 +38,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
           (error) => {
             console.error(error);
             this.resultColor = "#ff0077";
-            this.submitReport = "Error occure while sending your message! You can contact me directly on e-mail: crunck78@googlemail.com.";
+            this.submitReport = "Error occure while sending your message! You can contact me directly on E-mail: crunck78@googlemail.com.";
             this.submitComplete = true;
           }
         );
@@ -57,11 +53,6 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     //Start php via the built in server: $ php -S localhost:8000
-    this.endpoint = "https://mihai-andrei-neacsu.developerakademie.com/email/sendMail.php";
-    //this.endpoint = "http://localhost:4200/src/app/sendEmail.php";
-  }
 
-  ngAfterViewInit() {
-    
   }
 }

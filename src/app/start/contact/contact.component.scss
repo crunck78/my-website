@@ -62,6 +62,7 @@ section {
         top: 0;
         left: 0;
         right: 0;
+        z-index: 888;
     }
 
     mat-card {
@@ -69,7 +70,7 @@ section {
         bottom: 100px;
         left: 60px;
         right: 60px;
-        z-index: 2;
+        z-index: 999;
         border-width: 2px;
         border-style: solid;
         background-color: #2D2D1A;

@@ -27,6 +27,10 @@ export const paragraphs = [
         Today I learned to develop websites using the <b>Angular framework</b>.
     </p>`,
 
+    `<p>After finishing the Training as a <b>Front-End Developer</b> at Developer Akademie, they offer me a job as a <b>Senior Developer</b>.
+        So i started on April 2021 to work as a <b>Web Developer</b> and <b>Javascript Coach</b>.
+    </p>`,
+
     `<p>Besides programming, I am also interested in social and economic movements. In particular <b><a href="https://www.thevenusproject.com/" target="_blank">The Venus Project Organisation</a></b>.</p>`
 ];
 
