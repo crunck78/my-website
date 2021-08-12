@@ -16,7 +16,7 @@ export class ContactComponent{
     private progressBar: ProgressBarService,
     public navigation: NavigationService) { }
 
-  endpoint = "https://mihai-andrei-neacsu.developerakademie.com/email/sendMail.php";
+  endpoint = "https://mihai-andrei-neacsu.developerakademie.com/assets/sendMail.php";
   submitReport: string;
   submitComplete = false;
   resultColor: string;
