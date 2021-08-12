@@ -14,7 +14,7 @@
     <input placeholder="Email" type="email" name="email" ngModel #email="ngModel" required>
     <textarea placeholder="Message" name="message" ngModel #message="ngModel" required></textarea>
     <br>
-    <button [disabled]="!submitComplete">SUBMIT</button>
+    <button [disabled]="!myForm.valid">SUBMIT</button>
   </form>
   <mat-card [ngStyle]="{'border-color': resultColor}" *ngIf="submitComplete">
     <mat-card-content>
