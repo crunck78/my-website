@@ -1,4 +1,4 @@
-<section #projects snInViewport (inViewportChange)="onInViewportChange($event, 'projects')" [inViewportOptions]="{
+<section #projects id="projects" snInViewport (inViewportChange)="navigation.handleInViewPortChange($event, 'projects')" [inViewportOptions]="{
     rootMargin: '-50% 0px -50% 0px'
   }">
     <div class="title">
@@ -7,7 +7,7 @@
           }">PROJECTS</span>
         <div class="underline" snInViewport></div>
     </div>
-    <mat-grid-list cols="{{colsSize}}" rowHeight="2:1" (window:resize)="onResize($event)">
+    <mat-grid-list cols="{{colsSize}}" rowHeight="{{rowHeight}}" (window:resize)="onResize($event)">
         <mat-grid-tile *ngFor="let project of allProjects; let i = index">
             <div (mouseenter)="showCard(i)" (mouseleave)="hiddeCard(i)" class="tile-container" snInViewport>
                 <img src="../../assets/img/projects/{{project.img}}">

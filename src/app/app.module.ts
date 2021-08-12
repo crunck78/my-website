@@ -1,21 +1,29 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AboutComponent } from './about/about.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ContactComponent } from './contact/contact.component';
-import { MenuComponent } from './menu/menu.component';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+
+import { InViewportModule } from '@thisissoon/angular-inviewport';
+
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { InViewportModule } from '@thisissoon/angular-inviewport';
+import { MatTableModule } from '@angular/material/table';
+
+import { HeaderComponent } from './start/header/header.component';
+import { AboutComponent } from './start/about/about.component';
+import { ProjectsComponent } from './start/projects/projects.component';
+import { ContactComponent } from './start/contact/contact.component';
+import { MenuComponent } from './menu/menu.component';
+import { FooterComponent } from './footer/footer.component';
+import { StartComponent } from './start/start.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { DataProtectionComponent } from './data-protection/data-protection.component';
+import { CookieStatementComponent } from './cookie-statement/cookie-statement.component';
+import { AppComponent } from './app.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,18 +33,24 @@ import { InViewportModule } from '@thisissoon/angular-inviewport';
     ProjectsComponent,
     ContactComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    StartComponent,
+    ImprintComponent,
+    DataProtectionComponent,
+    CookieStatementComponent,
+    PageNotFoundComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatGridListModule,
-    FormsModule,
     HttpClientModule,
+    FormsModule,
+    InViewportModule,
+    MatGridListModule,
     MatCardModule,
     MatProgressBarModule,
-    InViewportModule
+    MatTableModule
   ],
   providers: [
     { provide: Window, useValue: window }

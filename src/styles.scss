@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: "Oxygen", sans-serif;
@@ -48,7 +52,8 @@ section {
     }
 }
 
-button {
+button,
+.btn {
     border-style: solid;
     font-family: "Oxygen", sans-serif;
     font-weight: 300;
@@ -83,6 +88,25 @@ button {
 
 .mat-progress-bar-buffer {
     background-color: white;
+}
+
+.page-link {
+    text-decoration: none;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    &:hover {
+        animation: onHover 225ms ease-in;
+        color: #00ff88;
+        cursor: pointer;
+    }
+}
+
+.active {
+    animation: onHover 225ms ease-in;
+    color: #00ff88;
 }
 
 @keyframes colorChange {
@@ -161,6 +185,20 @@ button {
                 width: 50px;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    /* For mobile phones: */
+    .page-link {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    /* For mobile phones: */
+    .page-link {
+        font-size: 10px;
     }
 }
 

@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { CanvasSpace, Create, Group, Line, Pt } from 'pts';
-import { ViewportserviceService } from '../services/viewportservice.service'
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-header',
@@ -18,16 +18,14 @@ export class HeaderComponent implements AfterViewInit {
   button: HTMLElement;
   homeElement: HTMLElement;
 
-  constructor(private window: Window, private viewPortService: ViewportserviceService) {
+  constructor(public navigation: NavigationService) {
 
   }
 
   ngAfterViewInit() {
-    //get canvas from parent
     this.homeElement = this.parentRef.nativeElement;
     this.canvas = this.homeElement.querySelector("canvas");
     this.button = this.homeElement.querySelector("button");
-    //console.log(this.canvas);
     this.graphicDraw();
   }
 
@@ -78,13 +76,6 @@ export class HeaderComponent implements AfterViewInit {
 
   onResize() {
     this.space.removeAll();
-    //this.canvas.remove();
     this.graphicDraw();
-  }
-
-  onInViewportChange(inViewport: boolean, id: string) {
-    this.viewPortService.isVisible = inViewport;
-    this.viewPortService.currentInView = id;
-    this.viewPortService.homeIsVissible = inViewport;
   }
 }

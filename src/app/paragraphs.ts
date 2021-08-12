@@ -22,9 +22,9 @@ export const paragraphs = [
         From there on I worked as a driver on a Forklift truck until today.
     </p>`,
 
-    `<p>At mid of this year I was recruited by the <b><a href="https://developerakademie.com/" target="_blank">Developer Akademie Team</a></b>. They trained me to become a <b>Front-end Developer</b>.
+    `<p>At mid of year 2020 I was recruited by the <b><a href="https://developerakademie.com/" target="_blank">Developer Akademie Team</a></b>. They trained me to become a <b>Front-end Developer</b>.
         Here I learn to build websites through intensive coaching, online seminars, video conferences.
-        Today I learned to develop websites using the <b>Angular web platform framework</b>.
+        Today I learned to develop websites using the <b>Angular framework</b>.
     </p>`,
 
     `<p>Besides programming, I am also interested in social and economic movements. In particular <b><a href="https://www.thevenusproject.com/" target="_blank">The Venus Project Organisation</a></b>.</p>`

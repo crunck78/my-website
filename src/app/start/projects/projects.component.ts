@@ -1,7 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { allProjects } from '../projects';
-import { ViewportserviceService } from '../services/viewportservice.service'
-
+import { NavigationService } from 'src/app/services/navigation.service';
+import { allProjects } from '../../projects';
 
 @Component({
   selector: 'app-projects',
@@ -12,10 +11,11 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   allProjects: Object[] = [];
   show = false;
   colsSize: number;
+  rowHeight = "2:1";
   @ViewChild('projects') private parentRef: ElementRef<HTMLElement>
   projectsElement: HTMLElement;
 
-  constructor(private viewPortService: ViewportserviceService) { }
+  constructor(public navigation: NavigationService) { }
 
   ngOnInit(): void {
     this.colsSize = window.innerWidth <= 600 ? 1 : 2;
@@ -43,11 +43,5 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   //sets the mat-grid-list cols attribute between 1 and 2 on window resize
   onResize(event: any) {
     this.colsSize = event.target.innerWidth <= 600 ? 1 : 2;
-  }
-
-  onInViewportChange(inViewport: boolean, id: string) {
-    this.viewPortService.isVisible = inViewport;
-    this.viewPortService.currentInView = id;
-    this.viewPortService.projectsIsVissible = inViewport;
   }
 }

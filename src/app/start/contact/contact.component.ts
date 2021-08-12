@@ -1,8 +1,8 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { ViewportserviceService } from '../services/viewportservice.service';
-import { ProgressBarService } from '../services/progress-bar.service';
+import { ProgressBarService } from '../../services/progress-bar.service';
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-contact',
@@ -11,10 +11,10 @@ import { ProgressBarService } from '../services/progress-bar.service';
 })
 export class ContactComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('contact') private parentRef: ElementRef<HTMLElement>;
-  contactElement: HTMLElement;
-
-  constructor(private http: HttpClient, private viewPortService: ViewportserviceService, private progressBar: ProgressBarService) { }
+  constructor(
+    private http: HttpClient,
+    private progressBar: ProgressBarService,
+    public navigation: NavigationService) { }
 
   endpoint: string;
   submitReport: string;
@@ -62,12 +62,6 @@ export class ContactComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.contactElement = this.parentRef.nativeElement;
-  }
-
-  onInViewportChange(inViewport: boolean, id: string) {
-    this.viewPortService.isVisible = inViewport;
-    this.viewPortService.currentInView = id;
-    this.viewPortService.contactIsVissible = inViewport;
+    
   }
 }

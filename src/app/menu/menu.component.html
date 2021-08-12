@@ -1,11 +1,9 @@
-<nav #menu>
+<nav #menu [class.bottom]="toggleCssBottom()">
     <div class="links-container">
-        <!--<div *ngFor="let link of links" class="page-link"
-            [class.active]="link==viewPortService.currentInView && viewPortService.isVisible">{{link}}</div>-->
-        <div class="page-link" [class.active]="viewPortService.homeIsVissible">{{links[0]}}</div>
-        <div class="page-link" [class.active]="viewPortService.aboutIsVissible">{{links[1]}}</div>
-        <div class="page-link" [class.active]="viewPortService.projectsIsVissible">{{links[2]}}</div>
-        <div class="page-link" [class.active]="viewPortService.contactIsVissible">{{links[3]}}</div>
+        <a href="#home" class="page-link" [class.active]="navigation.isSectionInViewPort('home')">Home</a>
+        <a href="#about" class="page-link" [class.active]="navigation.isSectionInViewPort('about')">About</a>
+        <a href="#projects" class="page-link" [class.active]="navigation.isSectionInViewPort('projects')">Projects</a>
+        <a href="#contact" class="page-link" [class.active]="navigation.isSectionInViewPort('contact')">Contact</a>
     </div>
     <mat-progress-bar  value="100" mode={{progressBar.mode}}></mat-progress-bar>
 </nav>

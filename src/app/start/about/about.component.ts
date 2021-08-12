@@ -3,10 +3,8 @@ import { ViewChild } from '@angular/core';
 //Angular prevents styles from intercepting inside and outside of the component.
 import { ViewEncapsulation } from '@angular/core';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { InViewportDirective, InViewportModule } from '@thisissoon/angular-inviewport';
-//import { CanvasSpace, Create, Group, Line, Polygon, Pt, Rectangle } from 'pts';
-import { paragraphs } from '../paragraphs';
-import { ViewportserviceService } from '../services/viewportservice.service'
+import { NavigationService } from 'src/app/services/navigation.service';
+import { paragraphs } from '../../paragraphs';
 
 @Component({
   selector: 'app-about',
@@ -22,7 +20,7 @@ export class AboutComponent implements AfterViewInit {
 
   paragraphs = paragraphs;
 
-  constructor(private viewPortService: ViewportserviceService) { }
+  constructor(public navigation: NavigationService) { }
 
   ngAfterViewInit() {
     this.aboutElement = this.parentRef.nativeElement;
@@ -31,11 +29,5 @@ export class AboutComponent implements AfterViewInit {
     paragraphContainers.forEach((container, index) => {
       container.insertAdjacentHTML('beforeend', this.paragraphs[index]);
     });
-  }
-  
-  onInViewportChange(inViewport: boolean, id: string) {
-    this.viewPortService.isVisible = inViewport;
-    this.viewPortService.currentInView = id;
-    this.viewPortService.aboutIsVissible = inViewport;
   }
 }

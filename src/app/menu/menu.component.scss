@@ -1,33 +1,15 @@
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
     background-color: #2d2d1a;
     height: 50px;
     display: flex;
     align-items: center;
-    //border-bottom: 3px solid #00ff88;
-    position: sticky;
-    top: 0;
-    max-width: 100%;
-    overflow: hidden;
-    z-index: 1;
     .links-container {
         display: flex;
-        .page-link {
-            margin-left: 16px;
-            margin-right: 16px;
-            color: white;
-            font-size: 20px;
-            text-transform: uppercase;
-            &:hover {
-                animation: onHover 225ms ease-in;
-                color: #00ff88;
-                cursor: pointer;
-            }
-        }
-
-        .active {
-            animation: onHover 225ms ease-in;
-            color: #00ff88;
-        }
     }
 
     mat-progress-bar{
@@ -38,6 +20,14 @@ nav {
     }
 }
 
+.bottom{
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    top: unset;
+}
+
 @keyframes onHover {
     from {
         color: white;
@@ -46,20 +36,3 @@ nav {
         color: #00ff88;
     }
 }
-
-
-@media only screen and (max-width: 500px) {
-    /* For mobile phones: */
-   nav .links-container .page-link{
-       font-size: 15px;
-   }
-}
-
-@media only screen and (max-width: 360px) {
-    /* For mobile phones: */
-     nav .links-container .page-link{
-        font-size: 10px;
-    }
-  }
-
-

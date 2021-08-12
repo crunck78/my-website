@@ -1,13 +1,13 @@
-<div #home class="header" (window:resize)="onResize()" snInViewport
-    (inViewportChange)="onInViewportChange($event, 'home')" [inViewportOptions]="{
+<div #home id="home" class="header" (window:resize)="onResize()" snInViewport
+    (inViewportChange)="navigation.handleInViewPortChange($event, 'home')" [inViewportOptions]="{
     rootMargin: '-50% 0px 0px 0px'
   }">
     <div class="title">
         <h1>Hi, I'm <span>Mihai-Andrei</span>.<br> And I'm a fresh Front-End Web Developer.</h1>
-        <button>
+        <a class="btn" href="#about">
             Find More
             <img src="../../assets/img/next.png">
-        </button>
+        </a>
     </div>
     <canvas #pts></canvas>
 </div>
