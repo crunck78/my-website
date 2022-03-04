@@ -11,7 +11,7 @@
         <mat-grid-tile *ngFor="let project of allProjects; let i = index">
             <div (mouseenter)="showCard(i)" (mouseleave)="hiddeCard(i)" class="tile-container" snInViewport>
                 <img src="../../assets/img/projects/{{project.img}}">
-                <mat-card class="hidde">
+                <mat-card class="hidde card">
                     <mat-card-title>{{project.name}}</mat-card-title>
                     <mat-card-subtitle>{{project.type}}</mat-card-subtitle>
                     <button (click)="visitProject(project.url)">View Project</button>

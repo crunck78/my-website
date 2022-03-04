@@ -18,6 +18,7 @@ export class NavigationService {
       .subscribe(event => {
         if (event instanceof NavigationEnd) {
          this.currentPath = location.path();
+         console.log(this.currentPath);
         }
       });
   }

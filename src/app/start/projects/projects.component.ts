@@ -29,11 +29,11 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   }
 
   showCard(index: number) {
-    this.projectsElement.querySelectorAll('mat-card').item(index).classList.remove('hidde');
+    this.projectsElement.querySelectorAll('.card').item(index).classList.remove('hidde');
   }
 
   hiddeCard(index: number) {
-    this.projectsElement.querySelectorAll('mat-card').item(index).classList.add('hidde');
+    this.projectsElement.querySelectorAll('.card').item(index).classList.add('hidde');
   }
 
   visitProject(url: string) {

@@ -18,15 +18,15 @@ const routes: Routes = [
   {
     path: '', component: StartComponent
   },
-  // {
-  //   path: 'data-protection', component: DataProtectionComponent
-  // },
-  // {
-  //   path: 'imprint', component: ImprintComponent
-  // },
-  // {
-  //   path: 'cookie-statement', component: CookieStatementComponent
-  // },
+  {
+    path: 'data-protection', component: DataProtectionComponent
+  },
+  {
+    path: 'imprint', component: ImprintComponent
+  },
+  {
+    path: 'cookie-statement', component: CookieStatementComponent
+  },
   {
     path: '**', component: PageNotFoundComponent
   }
