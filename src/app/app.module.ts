@@ -19,11 +19,11 @@ import { ContactComponent } from './start/contact/contact.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { StartComponent } from './start/start.component';
-import { ImprintComponent } from './imprint/imprint.component';
+import { ImprintComponent } from './routing-components/imprint/imprint.component';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
 import { CookieStatementComponent } from './cookie-statement/cookie-statement.component';
 import { AppComponent } from './app.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './routing-components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
