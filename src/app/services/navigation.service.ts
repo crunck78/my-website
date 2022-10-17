@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRoute, ActivationEnd, NavigationEnd, Router } from '@angular/router';
-import { StartComponent } from '../start/start.component';
+import { StartComponent } from '../routing-components/start/start.component';
 import { Location } from "@angular/common";
 
 @Injectable({

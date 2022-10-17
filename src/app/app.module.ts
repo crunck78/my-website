@@ -12,13 +12,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTableModule } from '@angular/material/table';
 
-import { HeaderComponent } from './start/header/header.component';
-import { AboutComponent } from './start/about/about.component';
-import { ProjectsComponent } from './start/projects/projects.component';
-import { ContactComponent } from './start/contact/contact.component';
+import { HeaderComponent } from './routing-components/start/header/header.component';
+import { AboutComponent } from './routing-components/start/about/about.component';
+import { ProjectsComponent } from './routing-components/start/projects/projects.component';
+import { ContactComponent } from './routing-components/start/contact/contact.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
-import { StartComponent } from './start/start.component';
+import { StartComponent } from './routing-components/start/start.component';
 import { ImprintComponent } from './routing-components/imprint/imprint.component';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
 import { CookieStatementComponent } from './cookie-statement/cookie-statement.component';

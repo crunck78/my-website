@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { NavigationService } from 'src/app/services/navigation.service';
-import { allProjects } from '../../projects';
+import { allProjects } from '../../../projects';
 
 @Component({
   selector: 'app-projects',

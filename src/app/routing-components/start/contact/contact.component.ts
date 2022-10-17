@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { ProgressBarService } from '../../services/progress-bar.service';
+import { ProgressBarService } from '../../../services/progress-bar.service';
 import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({

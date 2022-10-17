@@ -1,10 +1,10 @@
 import { AfterViewInit, ViewChild } from '@angular/core';
 import { Component } from '@angular/core';
-import { AboutComponent } from './start/about/about.component';
-import { ContactComponent } from './start/contact/contact.component';
-import { HeaderComponent } from './start/header/header.component';
+import { AboutComponent } from './routing-components/start/about/about.component';
+import { ContactComponent } from './routing-components/start/contact/contact.component';
+import { HeaderComponent } from './routing-components/start/header/header.component';
 import { MenuComponent } from './menu/menu.component';
-import { ProjectsComponent } from './start/projects/projects.component';
+import { ProjectsComponent } from './routing-components/start/projects/projects.component';
 import { NavigationService } from './services/navigation.service';
 
 @Component({
@@ -21,6 +21,6 @@ export class AppComponent implements AfterViewInit {
   title = 'my-website';
 
   ngAfterViewInit(): void {
-    
+
   }
 }
