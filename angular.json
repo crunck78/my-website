@@ -163,7 +163,6 @@
       }
     }
   },
-  "defaultProject": "my-website",
   "cli": {
     "analytics": "691a8713-8cfb-4355-8b6d-441e6c9beed6"
   }
