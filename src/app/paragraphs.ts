@@ -19,7 +19,7 @@ export const paragraphs = [
     </p>`,
 
     `<p>In March 2015 my daughter <b><i>Sofia Teodora</i></b> was born, and later that year I graduated my professional training as a <b>Machine and Production Facility Operator</b>.
-        From there on I worked as a driver on a Forklift truck until today.
+        From there on I worked as a driver on a Forklift truck until April 2021.
     </p>`,
 
     `<p>At mid of year 2020 I was recruited by the <b><a href="https://developerakademie.com/" target="_blank">Developer Akademie Team</a></b>. They trained me to become a <b>Front-end Developer</b>.

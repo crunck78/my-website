@@ -7,7 +7,7 @@ import { PageNotFoundComponent } from './routing-components/page-not-found/page-
 import { StartComponent } from './start/start.component';
 
 const routerOptions: ExtraOptions = {
-  initialNavigation: 'enabled',
+  initialNavigation: 'enabledNonBlocking',
   relativeLinkResolution: 'legacy',
   anchorScrolling: 'enabled',
   onSameUrlNavigation: 'reload',
