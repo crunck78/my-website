@@ -1,15 +1,27 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { RouterTestingModule } from '@angular/router/testing';
+import { InViewportModule } from '@thisissoon/angular-inviewport';
 import { AppComponent } from './app.component';
+import { FooterComponent } from './footer/footer.component';
+import { MenuComponent } from './menu/menu.component';
 
 describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        MatProgressBarModule,
+        InViewportModule,
+        MatGridListModule,
+        MatCardModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        MenuComponent,
+        FooterComponent
       ],
     }).compileComponents();
   }));
@@ -26,7 +38,7 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('my-website');
   });
 
-  it('should render title', () => {
+  xit('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;

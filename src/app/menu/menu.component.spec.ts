@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { RouterModule } from '@angular/router';
 
 import { MenuComponent } from './menu.component';
 
@@ -8,7 +10,11 @@ describe('MenuComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MenuComponent ]
+      declarations: [ MenuComponent ],
+      imports: [
+        RouterModule.forRoot([]),
+        MatProgressBarModule,
+      ]
     })
     .compileComponents();
   });

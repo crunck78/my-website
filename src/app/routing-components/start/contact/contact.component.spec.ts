@@ -1,4 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { InViewportModule } from '@thisissoon/angular-inviewport';
 
 import { ContactComponent } from './contact.component';
 
@@ -8,7 +12,13 @@ describe('ContactComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContactComponent ]
+      declarations: [ ContactComponent ],
+      imports:[
+        FormsModule,
+        HttpClientModule,
+        RouterModule.forRoot([]),
+        InViewportModule
+      ]
     })
     .compileComponents();
   });
