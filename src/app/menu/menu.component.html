@@ -5,5 +5,5 @@
         <a href="#projects" class="page-link" [class.active]="navigation.isSectionInViewPort('projects')">Projects</a>
         <a href="#contact" class="page-link" [class.active]="navigation.isSectionInViewPort('contact')">Contact</a>
     </div>
-    <mat-progress-bar  value="100" mode={{progressBar.mode}}></mat-progress-bar>
+    <mat-progress-bar  value="100" [mode]="progressBar.mode"></mat-progress-bar>
 </nav>
