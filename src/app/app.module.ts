@@ -11,6 +11,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
 
 import { HeaderComponent } from './routing-components/start/header/header.component';
 import { AboutComponent } from './routing-components/start/about/about.component';
@@ -50,7 +51,8 @@ import { PageNotFoundComponent } from './routing-components/page-not-found/page-
     MatGridListModule,
     MatCardModule,
     MatProgressBarModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule
   ],
   providers: [
     { provide: Window, useValue: window }

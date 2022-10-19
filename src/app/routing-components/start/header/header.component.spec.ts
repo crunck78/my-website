@@ -4,6 +4,8 @@ import { InViewportModule } from '@thisissoon/angular-inviewport';
 
 import { HeaderComponent } from './header.component';
 
+import { MatIconModule } from '@angular/material/icon';
+
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
@@ -13,7 +15,8 @@ describe('HeaderComponent', () => {
       declarations: [ HeaderComponent ],
       imports: [
         RouterModule.forRoot([]),
-        InViewportModule
+        InViewportModule,
+        MatIconModule
       ]
     })
     .compileComponents();

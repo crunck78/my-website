@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { InViewportModule } from '@thisissoon/angular-inviewport';
 import { AboutComponent } from './about/about.component';
@@ -25,7 +26,8 @@ describe('StartComponent', () => {
         FormsModule,
         MatGridListModule,
         InViewportModule,
-        MatCardModule
+        MatCardModule,
+        MatIconModule
       ]
     })
     .compileComponents();

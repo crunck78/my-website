@@ -28,14 +28,14 @@
 
         .btn {
             text-decoration: none;
-            img {
+            mat-icon {
                 width: 20px;
                 height: 20px;
                 margin-left: 6px;
                 animation: rotateArrowBack 225ms ease-in;
             }
 
-            &:hover img {
+            &:hover mat-icon {
                 animation: rotateArrow 225ms ease-in;
                 transform: rotate(90deg);
             }
@@ -84,7 +84,7 @@
 
         button{
             font-size: 0.8em;
-            img{
+            mat-icon{
                 width: 15px;
                 height: 15px;
                 margin-left: 3px;
