@@ -12,22 +12,20 @@ export class NavigationService {
   currentPath: string;
   currentInViewPort: string;
 
-  constructor(private location: Location ,private router: Router, private route: ActivatedRoute) {
+  constructor(private location: Location, private router: Router, private route: ActivatedRoute) {
 
     this.router.events
       .subscribe(event => {
-        if (event instanceof NavigationEnd) {
-         this.currentPath = location.path();
-         console.log(this.currentPath);
-        }
+        if (event instanceof NavigationEnd)
+          this.currentPath = location.path();
       });
   }
 
-  isSectionInViewPort(sectionId){
+  isSectionInViewPort(sectionId) {
     return this.currentPath == "" && this.currentInViewPort == sectionId;
   }
 
-  handleInViewPortChange( inViewPort, sectionId ){
-      this.currentInViewPort = inViewPort ? sectionId : this.currentInViewPort;
+  handleInViewPortChange(inViewPort, sectionId) {
+    this.currentInViewPort = inViewPort ? sectionId : this.currentInViewPort;
   }
 }
