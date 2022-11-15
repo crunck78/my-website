@@ -7,8 +7,6 @@ import { Location } from "@angular/common";
   providedIn: 'root'
 })
 export class NavigationService {
-
-
   currentPath: string;
   currentInViewPort: string;
 
